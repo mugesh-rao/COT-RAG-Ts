@@ -2,8 +2,13 @@
 
 ## Overview
 
-F1-AI is a Retrieval-Augmented Generation (RAG) application that leverages OpenAI's GPT-4 model and a vector database to provide context-aware answers to questions about Formula 1 racing. This project demonstrates how to build a RAG application using TypeScript, OpenAI, DataStax Astra DB, and Playwright.
+F1-AI is a Retrieval-Augmented Generation (RAG) application designed to provide context-aware, logically reasoned answers about Formula 1 racing. It leverages OpenAI's GPT-4 model with a reasoning model that follows Chain of Thought (CoT) principles, augmented by Retrieval-Augmented Reasoning (RAR) and Retrieval-Augmented Generation (RAG). The application retains context in memory for efficiency and uses a mock vector database (extendable to DataStax Astra DB) to retrieve relevant Formula 1 data. This project demonstrates an efficient, single-file TypeScript implementation for building advanced AI-driven Q&A systems.
 
+# Key Features
+Logical Reasoning: Employs step-by-step CoT reasoning for precise, logical answers.
+Context Retention: Stores context in memory with a 1-hour expiration to enhance response quality.
+RAR & RAG: Combines retrieved context with reasoning and generation for informed, accurate outputs.
+Efficiency: Caches embeddings and minimizes API calls for faster performance.
 
 ## Configuration
 
